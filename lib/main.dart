@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 void test() {
-  String? name = null;
-  print(name);
-  name = 'udai';
-  print(name);
+  List<String?>? names = ['udai', 'ryan', null];
+  names = null;
+  if (names == null) {
+    print('name is null');
+  }
 }
 
 void main() {
