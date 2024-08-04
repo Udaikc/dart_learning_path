@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-void test() {
-  const String? firstName=null;
-  const String? middleName=null;
-  const String? lastName='Baz';
+void test(String? firstName, String? middleName, String? lastName) {
+  var name = firstName;
+  name ??= middleName;
+  name ??= lastName;
 
-  const notNullString= firstName ?? middleName ?? lastName ;
-
+  print(name);
 }
 
 void main() {
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    test();
+    test(null, null, 'Baz');
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
